@@ -1,4 +1,4 @@
-require_relative '../exercises/exercise_2.rb'
+require_relative '../exercises/exercise_2'
 
 describe '#calculate_average' do
   it 'correctly calculates the average of an array of numbers' do
@@ -10,8 +10,8 @@ end
 
 describe '#filter_long_strings' do
   it 'correctly filters strings longer than a given length' do
-    expect(filter_long_strings(['apple', 'pear', 'banana', 'plum', 'cherry'], 4)).to eq(['apple', 'banana', 'cherry'])
-    expect(filter_long_strings(['a', 'ab', 'abc', 'abcd', 'abcde'], 2)).to eq(['abc', 'abcd', 'abcde'])
+    expect(filter_long_strings(%w[apple pear banana plum cherry], 4)).to eq(%w[apple banana cherry])
+    expect(filter_long_strings(%w[a ab abc abcd abcde], 2)).to eq(%w[abc abcd abcde])
     expect(filter_long_strings([], 3)).to eq([])
   end
 end
@@ -23,4 +23,3 @@ describe '#find_max' do
     expect(find_max([0])).to eq(0)
   end
 end
-

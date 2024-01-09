@@ -1,8 +1,8 @@
-require_relative '../exercises/exercise_1.rb'
+require_relative '../exercises/exercise_1'
 
 describe '#concatenate_strings' do
   it 'concatenates two strings' do
-    expect(concatenate_strings("Hello", "World")).to eq("HelloWorld")
+    expect(concatenate_strings('Hello', 'World')).to eq('HelloWorld')
   end
 end
 
